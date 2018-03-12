@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Klarna KCO module
+ *
+ * (c) Klarna Bank AB (publ)
+ *
+ * For the full copyright and license information, please view the NOTICE
+ * and LICENSE files that were distributed with this source code.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="klarnacheckout" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_index_index"/>
+    <head>
+        <css src="TIG_PostNL::css/deliveryoptions.css"/>
+    </head>
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="klarna_shipping" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="postnl-deliveryoptions" xsi:type="array">
+                                                    <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Main</item>
+                                                    <item name="displayArea" xsi:type="string">postnl-deliveryoptions</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="postnl-deliveryoptions-delivery" xsi:type="array">
+                                                            <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Delivery</item>
+                                                            <item name="displayArea" xsi:type="string">postnl-deliveryoptions-delivery</item>
+                                                        </item>
+                                                        <item name="postnl-deliveryoptions-pickup" xsi:type="array">
+                                                            <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Pickup</item>
+                                                            <item name="displayArea" xsi:type="string">postnl-deliveryoptions-pickup</item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
