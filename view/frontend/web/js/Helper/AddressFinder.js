@@ -20,13 +20,13 @@ define([
     'use strict';
 
     var address = {
-            postalCode  : null,
-            countryCode : null,
-            street      : null,
-            firstname   : null,
-            lastname    : null,
-            telephone   : null
-        },
+        postalCode  : null,
+        countryCode : null,
+        street      : null,
+        firstname   : null,
+        lastname    : null,
+        telephone   : null
+    },
         countryCode,
         timer,
         allFieldsExists = true,

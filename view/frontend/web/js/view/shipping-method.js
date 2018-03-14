@@ -52,7 +52,7 @@ define([
             this._super();
         },
 
-        setupListener: function() {
+        setupListener: function () {
             $('#onepage-checkout-shipping-method-additional-load').on('change', 'input', function () {
                 setShippingInformationAction();
             });
