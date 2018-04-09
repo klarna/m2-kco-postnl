@@ -7,12 +7,14 @@
  * and LICENSE files that were distributed with this source code.
  */
 define([
+    'jquery',
     'ko',
     'Magento_Checkout/js/action/select-shipping-method',
     'Magento_Checkout/js/checkout-data',
     'Magento_Checkout/js/model/quote',
     'Klarna_Kco/js/action/select-shipping-method'
 ], function (
+    $,
     ko,
     selectShippingMethodAction,
     checkoutData,
@@ -24,6 +26,7 @@ define([
         fee = ko.observable(null),
         currentSelectedShipmentType = ko.observable(null),
         config = window.checkoutConfig.shipping.postnl,
+        currentShippingmethod =  ko.observable(null),
         pickupAddress = ko.observable(null);
 
     var isLoading = ko.computed(function () {
@@ -45,6 +48,10 @@ define([
         if (value == 'pickup') {
             fee(0);
         }
+    });
+
+    $(document).on("compatible_postnl_deliveryoptions_save_done", function(event, data) {
+        kcoShippingMethod(currentShippingmethod);
     });
 
     return {
@@ -69,9 +76,9 @@ define([
          * @returns {boolean}
          */
         selectShippingMethod: function () {
+            currentShippingmethod = this.method();
             selectShippingMethodAction(this.method());
             checkoutData.setSelectedShippingRate(this.method().carrier_code + '_' + this.method().method_code);
-            kcoShippingMethod(this.method());
             return true;
         }
     };
