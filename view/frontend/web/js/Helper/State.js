@@ -12,14 +12,16 @@ define([
     'Magento_Checkout/js/action/select-shipping-method',
     'Magento_Checkout/js/checkout-data',
     'Magento_Checkout/js/model/quote',
-    'Klarna_Kco/js/action/select-shipping-method'
+    'Klarna_Kco/js/action/select-shipping-method',
+    'Klarna_Kco/js/model/klarna'
 ], function (
     $,
     ko,
     selectShippingMethodAction,
     checkoutData,
     quote,
-    kcoShippingMethod
+    kcoShippingMethod,
+    klarna
 ) {
     var deliveryOptionsAreLoading = ko.observable(false),
         pickupOptionsAreLoading = ko.observable(false),
@@ -50,7 +52,12 @@ define([
         }
     });
 
+    $(document).on("compatible_postnl_deliveryoptions_save_before", function(event, data) {
+        klarna.suspend();
+    });
+
     $(document).on("compatible_postnl_deliveryoptions_save_done", function(event, data) {
+        klarna.resume();
         kcoShippingMethod(currentShippingmethod);
     });
 
