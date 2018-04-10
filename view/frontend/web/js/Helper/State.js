@@ -28,7 +28,7 @@ define([
         fee = ko.observable(null),
         currentSelectedShipmentType = ko.observable(null),
         config = window.checkoutConfig.shipping.postnl,
-        currentShippingmethod =  ko.observable(null),
+        currentShippingmethod =  null,
         pickupAddress = ko.observable(null);
 
     var isLoading = ko.computed(function () {
