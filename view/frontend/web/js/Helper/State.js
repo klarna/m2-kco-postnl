@@ -57,7 +57,6 @@ define([
     });
 
     $(document).on("compatible_postnl_deliveryoptions_save_done", function(event, data) {
-        klarna.resume();
         kcoShippingMethod(currentShippingmethod);
     });
 
