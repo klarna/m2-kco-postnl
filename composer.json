@@ -3,7 +3,10 @@
     "description": "integrate postnl with kco module",
     "type": "magento2-module",
     "license": "Apache-2.0",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "support": {
+        "email": "magento@klarna.com"
+    },
     "authors": [
         {
             "name": "Fei Chen",
