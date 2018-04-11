@@ -14,6 +14,8 @@ The Klarna_KcoPostnl module:
 
 You can find the list of modules that have dependencies on Klarna_KcoPostnl module, in the `require` section of the `composer.json` file located in the same directory as this `README.md` file.
 
+**NOTE**: Due to frequent changes in the tig/postnl-magento2 module that break Klarna Checkout support, we lock to a specific version of that module. We will review and update to newer versions of tig/postnl-magento2 on a regular basis but there may be delays from their release until our support for it.
+
 ## Extension Points
 
 The Klarna_KcoPostnl module does not provide any specific extension points. You can extend it using the Magento extension mechanism.
