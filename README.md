@@ -1,5 +1,7 @@
 # Klarna_KcoPostnl module
 
+[![Packagist Version][packagist-shield]](https://packagist.org/packages/klarna/module-kco-post-nl)
+
 ## Overview
 
 The Klarna_KcoPostnl Add-On module adds support for the [tig/postnl-magento2](https://github.com/tig-nl/postnl-magento2/) PostNL module to Klarna Checkout in Magento 2.x.
