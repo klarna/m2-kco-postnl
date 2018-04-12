@@ -1,3 +1,0 @@
-[submodule "build"]
-	path = build
-	url = ssh://git@stash.int.klarna.net:7999/gpp/m2-build.git
