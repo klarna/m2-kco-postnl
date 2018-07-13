@@ -10,23 +10,25 @@ define([
     'ko',
     'Magento_Checkout/js/model/quote',
     'jquery',
-    'Magento_Customer/js/model/customer'
+    'Magento_Customer/js/model/customer',
+    'TIG_PostNL/js/Renderer/DeliveryOptions/Main'
 ], function (
     ko,
     quote,
     $,
-    customer
+    customer,
+    postnl_delivery_main // Without it missing requirement js errors will be thrown
 ) {
     'use strict';
 
     var address = {
-        postalCode  : null,
-        countryCode : null,
-        street      : null,
-        firstname   : null,
-        lastname    : null,
-        telephone   : null
-    },
+            postalCode  : null,
+            countryCode : null,
+            street      : null,
+            firstname   : null,
+            lastname    : null,
+            telephone   : null
+        },
         countryCode,
         timer,
         allFieldsExists = true,
