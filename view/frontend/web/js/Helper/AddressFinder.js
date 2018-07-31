@@ -10,14 +10,12 @@ define([
     'ko',
     'Magento_Checkout/js/model/quote',
     'jquery',
-    'Magento_Customer/js/model/customer',
-    'TIG_PostNL/js/Renderer/DeliveryOptions/Main'
+    'Magento_Customer/js/model/customer'
 ], function (
     ko,
     quote,
     $,
-    customer,
-    postnl_delivery_main // Without it missing requirement js errors will be thrown
+    customer
 ) {
     'use strict';
 
