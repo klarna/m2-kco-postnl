@@ -1,7 +1,6 @@
 /**
  * This file is part of the Klarna KCO module
  *
- * (c) Klarna Bank AB (publ)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -28,7 +27,7 @@ define([
             telephone   : null,
             housenumber : null
         },
-        country,
+        countryCode,
         timer,
         allFieldsExists = true,
         valueUpdateNotifier = ko.observable(null);
@@ -52,7 +51,7 @@ define([
         }
 
         timer = setTimeout(function () {
-            country = $("select[name*='country_id']").val();
+            countryCode = $("select[name*='country_id']").val();
             valueUpdateNotifier.notifySubscribers();
         }, 500);
     });
@@ -72,8 +71,7 @@ define([
          * The street is not always available on the first run.
          */
         var shippingAddress = quote.shippingAddress();
-
-        if (customer.isLoggedIn() || (shippingAddress && shippingAddress.street)) {
+        if (shippingAddress && shippingAddress.street) {
             address = {
                 street: shippingAddress.street,
                 postcode: shippingAddress.postcode,
@@ -81,7 +79,7 @@ define([
                 firstname: shippingAddress.firstname,
                 telephone: shippingAddress.telephone,
                 country: shippingAddress.countryId,
-                housenumber: housenumber
+                housenumber : housenumber
             };
 
             return address;
@@ -112,12 +110,12 @@ define([
             address.housenumber = housenumber;
         }
 
-        address.postcode = $("input[name*='postcode']").val();
+        address.postcode   = $("input[name*='postcode']").val();
         address.firstname  = $("input[name*='firstname']").val();
         address.lastname   = $("input[name*='lastname']").val();
         address.telephone  = $("input[name*='telephone']").val();
 
-        if (!address.country || address.country !== country) {
+        if (!address.country || address.country !== countryCode) {
             address.country = $("select[name*='country_id']").val();
         }
 
