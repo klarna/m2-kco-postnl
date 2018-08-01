@@ -15,69 +15,39 @@
         <css src="TIG_PostNL::css/deliveryoptions.css"/>
     </head>
     <body>
-        <referenceContainer name="content">
-            <referenceBlock name="checkout.root">
-                <arguments>
-                    <argument name="jsLayout" xsi:type="array">
-                        <item name="components" xsi:type="array">
-                            <item name="checkout" xsi:type="array">
-                                <item name="children" xsi:type="array">
-                                    <item name="steps" xsi:type="array">
-                                        <item name="children" xsi:type="array">
-                                            <item name="shipping-step" xsi:type="array">
-                                                <item name="children" xsi:type="array">
-                                                    <item name="klarna_shipping" xsi:type="array">
-                                                        <item name="component" xsi:type="string">TIG_PostNL/js/view/shipping</item>
-                                                        <item name="children" xsi:type="array">
-                                                            <item name="postnl-deliveryoptions" xsi:type="array">
-                                                                <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Main</item>
-                                                                <item name="displayArea" xsi:type="string">postnl-deliveryoptions</item>
-                                                                <item name="children" xsi:type="array">
-                                                                    <item name="postnl-deliveryoptions-delivery" xsi:type="array">
-                                                                        <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Delivery</item>
-                                                                        <item name="displayArea" xsi:type="string">postnl-deliveryoptions-delivery</item>
-                                                                    </item>
-                                                                    <item name="postnl-deliveryoptions-pickup" xsi:type="array">
-                                                                        <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Pickup</item>
-                                                                        <item name="displayArea" xsi:type="string">postnl-deliveryoptions-pickup</item>
-                                                                    </item>
-                                                                </item>
-                                                            </item>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="klarna_shipping" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="postnl-deliveryoptions" xsi:type="array">
+                                                    <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Main</item>
+                                                    <item name="displayArea" xsi:type="string">postnl-deliveryoptions</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="postnl-deliveryoptions-delivery" xsi:type="array">
+                                                            <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Delivery</item>
+                                                            <item name="displayArea" xsi:type="string">postnl-deliveryoptions-delivery</item>
                                                         </item>
-                                                    </item>
-                                                    <item name="step-config" xsi:type="array">
-                                                        <item name="children" xsi:type="array">
-                                                            <item name="shipping-rates-validation" xsi:type="array">
-                                                                <item name="children" xsi:type="array">
-                                                                    <item name="tig_postnl-rates-validation" xsi:type="array">
-                                                                        <item name="component" xsi:type="string">TIG_PostNL/js/view/shipping-rates-validation/postnl</item>
-                                                                    </item>
-                                                                </item>
-                                                            </item>
+                                                        <item name="postnl-deliveryoptions-pickup" xsi:type="array">
+                                                            <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/DeliveryOptions/Pickup</item>
+                                                            <item name="displayArea" xsi:type="string">postnl-deliveryoptions-pickup</item>
                                                         </item>
                                                     </item>
                                                 </item>
-                                            </item>
-                                        </item>
-                                    </item>
-
-                                    <item name="sidebar" xsi:type="array">
-                                        <item name="children" xsi:type="array">
-                                            <item name="tig-postnl-pakjegemak-address" xsi:type="array">
-                                                <item name="component" xsi:type="string">TIG_PostNL/js/Renderer/Pakjegemak/Address</item>
-                                                <item name="config" xsi:type="array">
-                                                    <item name="deps" xsi:type="string">checkout.steps.shipping-step.shippingAddress</item>
-                                                </item>
-                                                <item name="displayArea" xsi:type="string">shipping-information</item>
                                             </item>
                                         </item>
                                     </item>
                                 </item>
                             </item>
                         </item>
-                    </argument>
-                </arguments>
-            </referenceBlock>
-        </referenceContainer>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>

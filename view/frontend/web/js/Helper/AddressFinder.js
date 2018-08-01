@@ -1,7 +1,6 @@
 /**
  * This file is part of the Klarna KCO module
  *
- * (c) Klarna Bank AB (publ)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -20,12 +19,13 @@ define([
     'use strict';
 
     var address = {
-            postalCode  : null,
-            countryCode : null,
+            postcode    : null,
+            country     : null,
             street      : null,
             firstname   : null,
             lastname    : null,
-            telephone   : null
+            telephone   : null,
+            housenumber : null
         },
         countryCode,
         timer,
@@ -62,19 +62,24 @@ define([
     return ko.computed(function () {
         valueUpdateNotifier();
 
+        var housenumber;
+        if (window.checkoutConfig.postcode !== undefined) {
+            housenumber = $("input[name*='tig_housenumber']").val();
+        }
+
         /**
          * The street is not always available on the first run.
          */
         var shippingAddress = quote.shippingAddress();
-
-        if (customer.isLoggedIn() || (shippingAddress && shippingAddress.street)) {
+        if (shippingAddress && shippingAddress.street) {
             address = {
                 street: shippingAddress.street,
-                postalCode: shippingAddress.postcode,
+                postcode: shippingAddress.postcode,
                 lastname: shippingAddress.lastname,
                 firstname: shippingAddress.firstname,
                 telephone: shippingAddress.telephone,
-                countryCode: shippingAddress.countryId
+                country: shippingAddress.countryId,
+                housenumber : housenumber
             };
 
             return address;
@@ -82,7 +87,6 @@ define([
 
         allFieldsExists = true;
         $.each(fields, function () {
-
             /** Second street may not exist and is therefor not required and should only be observed. */
             if (!$(this).length && this !== "input[name*='street[1]']") {
                 allFieldsExists = false;
@@ -102,18 +106,23 @@ define([
             1 : $("input[name*='street[1]']").val()
         };
 
-        address.postalCode = $("input[name*='postcode']").val();
+        if (housenumber !== undefined) {
+            address.housenumber = housenumber;
+        }
+
+        address.postcode   = $("input[name*='postcode']").val();
         address.firstname  = $("input[name*='firstname']").val();
         address.lastname   = $("input[name*='lastname']").val();
         address.telephone  = $("input[name*='telephone']").val();
 
-        if (!address.countryCode || address.countryCode !== countryCode) {
-            address.countryCode = $("select[name*='country_id']").val();
+        if (!address.country || address.country !== countryCode) {
+            address.country = $("select[name*='country_id']").val();
         }
 
-        if (!address.countryCode || !address.postalCode || !address.street) {
+        if (!address.country || !address.postcode || !address.street[0]) {
             return false;
         }
+
         return address;
     }.bind(this));
 });
