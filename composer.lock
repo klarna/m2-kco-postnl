@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "486611a731347b18cfbf1ff89a6d81cc",
+    "content-hash": "8e9b6687592ef510b0ec2a1948b71399",
     "packages": [
         {
             "name": "colinmollenhour/credis",
@@ -4087,16 +4087,16 @@
         },
         {
             "name": "tig/postnl-magento2",
-            "version": "1.4.3",
+            "version": "1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tig-nl/postnl-magento2.git",
-                "reference": "4fadacf7341fec2cc4fbbf4569131f4118460f1b"
+                "reference": "c8ba3a8818deec6f05d51737a868f5246fd16dbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tig-nl/postnl-magento2/zipball/4fadacf7341fec2cc4fbbf4569131f4118460f1b",
-                "reference": "4fadacf7341fec2cc4fbbf4569131f4118460f1b",
+                "url": "https://api.github.com/repos/tig-nl/postnl-magento2/zipball/c8ba3a8818deec6f05d51737a868f5246fd16dbb",
+                "reference": "c8ba3a8818deec6f05d51737a868f5246fd16dbb",
                 "shasum": ""
             },
             "require": {
@@ -4132,7 +4132,7 @@
             ],
             "description": "TIG Magento 2 PostNL extension",
             "homepage": "https://tig.nl/postnl",
-            "time": "2018-07-09T08:23:12+00:00"
+            "time": "2018-07-30T11:50:28+00:00"
         },
         {
             "name": "zendframework/zend-code",
