@@ -18,7 +18,7 @@ To use this module you must:
 
 The Klarna_KcoPostnl module:
 
- * Adds plugin on `Klarna\Core\Model\Api\Builder::setRequest` to add an attachment for the Klarna Checkout API to pass EMD data (See https://developers.klarna.com/api/#payments-api__attachment__body__other_delivery_address)
+ * Adds plugin on `Klarna\KcoCore\Model\Api\Builder::setRequest` to add an attachment for the Klarna Checkout API to pass EMD data (See https://developers.klarna.com/api/#payments-api__attachment__body__other_delivery_address)
 
 ## Dependencies
 

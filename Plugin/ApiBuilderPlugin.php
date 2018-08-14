@@ -78,14 +78,14 @@ class ApiBuilderPlugin
     /**
      * Plugin before klarna kco api builder set request
      *
-     * @param \Klarna\Core\Model\Api\Builder $subject
+     * @param \Klarna\KcoCore\Model\Api\Builder $subject
      * @param array $request
      * @param string $type
      *
      * @return array
      * @SuppressWarnings(PMD.UnusedFormalParameter)
      */
-    public function beforeSetRequest(\Klarna\Core\Model\Api\Builder $subject, array $request, $type = 'create')
+    public function beforeSetRequest(\Klarna\KcoCore\Model\Api\Builder $subject, array $request, $type = 'create')
     {
         if ($this->attachmentExists($request)) {
             $request['attachment'] = $this->updateAttachment($request);
