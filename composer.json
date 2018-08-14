@@ -11,6 +11,14 @@
         {
             "name": "Fei Chen",
             "email": "fei.chen@klarna.com"
+        },
+        {
+            "name": "Dario Kassler",
+            "email": "dario.kassler@klarna.com"
+        },
+        {
+            "name": "Joe Constant",
+            "email": "joe.constant@klarna.com"
         }
     ],
     "require": {
