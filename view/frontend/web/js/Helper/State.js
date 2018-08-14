@@ -1,5 +1,5 @@
 /**
- * This file is part of the Klarna KCO module
+ * This file is part of the Klarna KCO PostNL module
  *
  * (c) Klarna Bank AB (publ)
  *

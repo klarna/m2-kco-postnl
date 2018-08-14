@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the Klarna KCO module
+ * This file is part of the Klarna KCO PostNL module
  *
  * (c) Klarna Bank AB (publ)
  *
@@ -19,7 +19,7 @@ use Magento\Quote\Model\QuoteRepository as MageQuoteRepository;
 
 /**
  * Class ApiBuilderPlugin
- * @package Klarna\EmdOtherAddress\Plugin
+ * @package Klarna\KcoPostnl\Plugin
  */
 class ApiBuilderPlugin
 {
