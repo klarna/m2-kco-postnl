@@ -1,6 +1,6 @@
 # Klarna_KcoPostnl module
 
-[![Packagist Version][packagist-shield]](https://packagist.org/packages/klarna/module-kco-post-nl)
+[![Latest stable](https://img.shields.io/packagist/v/klarna/module-kco-post-nl.svg)](https://packagist.org/packages/klarna/module-kco-post-nl)
 
 ## Overview
 

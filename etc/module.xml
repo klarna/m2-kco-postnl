@@ -10,7 +10,7 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Klarna_KcoPostnl" setup_version="1.0.2">
+    <module name="Klarna_KcoPostnl" setup_version="2.0.0">
         <sequence>
             <module name="Klarna_KcoCore" />
             <module name="Klarna_Kco" />

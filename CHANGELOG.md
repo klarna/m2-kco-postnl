@@ -1,3 +1,14 @@
+
+2.0.0 / 2018-08-14
+==================
+
+  * Add support for Klarna Checkout 6.0
+  * Update module authors in composer.json
+  * Fix description line in composer.json
+  * Remove naming rules from GrumPHP
+  * Change from Core to KcoCore dependency
+  * Fix module name in file PHPDOC blocks
+
 1.0.2 / 2018-08-01
 ==================
 
