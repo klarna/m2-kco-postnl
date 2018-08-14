@@ -7,7 +7,7 @@ parameters:
       triggered_by: [php, phtml]
     phpmd:
       exclude: [vendor]
-      ruleset: [cleancode, codesize, naming]
+      ruleset: [cleancode, codesize]
       triggered_by: [php, phtml]
     phpcs:
       ignore_patterns: [vendor]
