@@ -1,6 +1,6 @@
 {
     "name": "klarna/module-kco-post-nl",
-    "description": "integrate postnl with kco module",
+    "description": "Integrate PostNL with Klarna Checkout module",
     "type": "magento2-module",
     "license": "Apache-2.0",
     "version": "1.0.2",
