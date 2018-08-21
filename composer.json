@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "php": "^5.6|7.0.2|7.0.4|~7.0.6|~7.1.0",
+        "php": "^5.6|~7.0.13|~7.1.0|~7.2.0",
         "klarna/module-kco-core": "^5.0",
         "klarna/module-kco": "^6.0",
         "tig/postnl-magento2": "1.4.4"
